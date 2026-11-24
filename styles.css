@@ -1,0 +1,360 @@
+/* ==========================================================================
+   Paleta inspirada en "Untitled (Say Goodbye, Catullus, to the Shores
+   of Asia Minor)" (1972–1994), Cy Twombly — Menil Collection.
+   Fondo uniforme tipo yeso/lienzo, trazos en grafito y acentos muy contenidos.
+   ========================================================================== */
+
+:root {
+  --canvas: #f5f1e8;
+  --ink: #1f1d1a;
+  --ink-muted: #57524a;
+  --rule: #ddd6c7;
+  --accent-red: #a63a2b;
+  --accent-blue: #3d5a73;
+
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --measure: 700px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.65;
+  background-color: var(--canvas);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-red);
+  border-bottom-color: var(--accent-red);
+  outline: none;
+}
+
+.canvas {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2.25rem 1.5rem 5rem;
+}
+
+/* Barra superior discreta */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.lang-btn {
+  appearance: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 0.1rem 0.05rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  color: var(--ink);
+  outline: none;
+}
+
+.lang-btn.is-active {
+  color: var(--ink);
+  border-bottom-color: var(--accent-red);
+}
+
+.lang-sep {
+  opacity: 0.45;
+}
+
+/* Cabecera / Quién eres */
+.hero {
+  margin-bottom: 3.25rem;
+}
+
+.twombly-mark {
+  display: block;
+  width: 210px;
+  height: auto;
+  margin-bottom: 1.75rem;
+}
+
+.hero-name {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 3.25rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+.hero-role {
+  margin: 0 0 1.4rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--ink-muted);
+}
+
+.hero-bio {
+  margin: 0 0 1.85rem;
+  font-size: 0.96rem;
+  color: var(--ink);
+  max-width: 60ch;
+}
+
+.hero-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.link-accent {
+  color: var(--accent-red);
+  border-bottom-color: rgba(166, 58, 43, 0.35);
+}
+
+.link-accent:hover,
+.link-accent:focus-visible {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+/* Líneas de grafito */
+.graphite-rule {
+  border: 0;
+  height: 1px;
+  background-color: var(--rule);
+  margin: 3rem 0;
+}
+
+/* Secciones */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.roman-num {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--accent-blue);
+  min-width: 1.5rem;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Entradas (Experiencia, Educación, Proyectos) */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.entry-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.entry-sub {
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+
+.entry-role {
+  margin: 0.15rem 0 0;
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+
+.entry-meta,
+.repo-link {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.repo-link {
+  color: var(--accent-blue);
+  border-bottom-color: rgba(61, 90, 115, 0.35);
+}
+
+.repo-link:hover,
+.repo-link:focus-visible {
+  color: var(--accent-red);
+  border-bottom-color: var(--accent-red);
+}
+
+.entry-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.entry-list li + li {
+  margin-top: 0.45rem;
+}
+
+/* Listas clave-valor (Habilidades e Idiomas) */
+.kv-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.kv-row {
+  display: grid;
+  grid-template-columns: 155px 1fr;
+  gap: 1rem;
+  font-size: 0.92rem;
+}
+
+.kv-row dt {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--ink-muted);
+  padding-top: 0.2rem;
+}
+
+.kv-row dd {
+  margin: 0;
+}
+
+/* Certificaciones */
+.cert-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+}
+
+.cert-list strong {
+  font-weight: 500;
+}
+
+.cert-year {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+  margin-left: 0.35rem;
+}
+
+.langs-list {
+  margin-top: 1.85rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+/* Pie de página */
+.footer {
+  margin-top: 4.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .canvas {
+    padding: 1.5rem 1.15rem 3.5rem;
+  }
+
+  .topbar {
+    margin-bottom: 3rem;
+  }
+
+  .entry-head {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .kv-row {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
