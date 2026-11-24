@@ -1,22 +1,25 @@
 /* ==========================================================================
-   Paleta inspirada en "Untitled (Say Goodbye, Catullus, to the Shores
-   of Asia Minor)" (1972–1994), Cy Twombly — Menil Collection.
-   Fondo uniforme tipo yeso/lienzo, trazos en grafito y acentos muy contenidos.
+   Fondo: #f3f4ec | Texto: #000000 | Fuente: Times New Roman
+   Paleta: #eeeee4 #f0e7d2 #ddcbc6 #f3d146 #dcaa61 #e1a8a0 #9ca0af #42383c #8a605d #e16657
    ========================================================================== */
 
 :root {
-  --canvas: #f5f1e8;
-  --ink: #1f1d1a;
-  --ink-muted: #57524a;
-  --rule: #ddd6c7;
-  --accent-red: #a63a2b;
-  --accent-blue: #3d5a73;
+  --bg: #f3f4ec;
+  --ink: #000000;
 
-  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --p-alabaster: #eeeee4;
+  --p-cream: #f0e7d2;
+  --p-blush: #ddcbc6;
+  --p-yellow: #f3d146;
+  --p-ochre: #dcaa61;
+  --p-rose: #e1a8a0;
+  --p-slate: #9ca0af;
+  --p-charcoal: #42383c;
+  --p-umber: #8a605d;
+  --p-vermilion: #e16657;
 
-  --measure: 700px;
+  --font-main: "Times New Roman", Times, serif;
+  --measure: 720px;
 }
 
 *,
@@ -26,33 +29,31 @@
 }
 
 html {
-  background-color: var(--canvas);
+  background-color: var(--bg);
   color: var(--ink);
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 17px;
 }
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
   font-weight: 400;
-  line-height: 1.65;
-  background-color: var(--canvas);
+  line-height: 1.62;
+  background-color: var(--bg);
   color: var(--ink);
 }
 
 a {
-  color: inherit;
+  color: var(--ink);
   text-decoration: none;
-  border-bottom: 1px solid var(--rule);
-  transition: color 0.18s ease, border-color 0.18s ease;
+  border-bottom: 1px solid var(--p-umber);
+  transition: background-color 0.18s ease, border-color 0.18s ease;
 }
 
 a:hover,
 a:focus-visible {
-  color: var(--accent-red);
-  border-bottom-color: var(--accent-red);
+  background-color: var(--p-cream);
+  border-bottom-color: var(--p-vermilion);
   outline: none;
 }
 
@@ -67,12 +68,11 @@ a:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink-muted);
+  color: var(--ink);
 }
 
 .lang-switch {
@@ -85,65 +85,69 @@ a:focus-visible {
   appearance: none;
   background: none;
   border: none;
-  border-bottom: 1px solid transparent;
-  padding: 0.1rem 0.05rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
+  border-bottom: 2px solid transparent;
+  padding: 0.1rem 0.2rem;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
   letter-spacing: 0.08em;
-  color: var(--ink-muted);
+  color: var(--ink);
   cursor: pointer;
-  transition: color 0.18s ease, border-color 0.18s ease;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
 }
 
 .lang-btn:hover,
 .lang-btn:focus-visible {
-  color: var(--ink);
+  background-color: var(--p-cream);
   outline: none;
 }
 
 .lang-btn.is-active {
-  color: var(--ink);
-  border-bottom-color: var(--accent-red);
+  font-weight: 700;
+  border-bottom-color: var(--p-vermilion);
 }
 
 .lang-sep {
-  opacity: 0.45;
+  color: var(--ink);
 }
 
-/* Cabecera / Quién eres */
+/* Obra pictórica Catullus + Cabecera */
 .hero {
-  margin-bottom: 3.25rem;
+  margin-bottom: 2.75rem;
 }
 
-.twombly-mark {
+.artwork-frame {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 1.85rem;
+  background-color: var(--bg);
+}
+
+.catullus-canvas {
   display: block;
-  width: 210px;
-  height: auto;
-  margin-bottom: 1.75rem;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-name {
-  margin: 0 0 0.35rem;
-  font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5vw, 3.25rem);
-  font-weight: 500;
-  line-height: 1.08;
+  margin: 0 0 0.25rem;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
   letter-spacing: -0.01em;
 }
 
 .hero-role {
-  margin: 0 0 1.4rem;
-  font-family: var(--font-serif);
+  margin: 0 0 1.25rem;
   font-style: italic;
   font-size: 1.25rem;
-  color: var(--ink-muted);
+  color: var(--ink);
 }
 
 .hero-bio {
-  margin: 0 0 1.85rem;
-  font-size: 0.96rem;
+  margin: 0 0 1.75rem;
+  font-size: 1.04rem;
   color: var(--ink);
-  max-width: 60ch;
+  max-width: 62ch;
 }
 
 .hero-links {
@@ -152,29 +156,62 @@ a:focus-visible {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.75rem;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.02em;
+  gap: 0.65rem 1rem;
+  font-size: 0.96rem;
 }
 
-.link-accent {
-  color: var(--accent-red);
-  border-bottom-color: rgba(166, 58, 43, 0.35);
-}
-
-.link-accent:hover,
-.link-accent:focus-visible {
+.pill-link {
+  display: inline-block;
+  padding: 0.22rem 0.72rem;
+  border: 1px solid var(--p-charcoal);
+  background-color: var(--p-alabaster);
   color: var(--ink);
-  border-bottom-color: var(--ink);
 }
 
-/* Líneas de grafito */
+.pill-github:hover,
+.pill-github:focus-visible {
+  background-color: var(--p-slate);
+  border-color: var(--p-charcoal);
+}
+
+.pill-linkedin:hover,
+.pill-linkedin:focus-visible {
+  background-color: var(--p-cream);
+  border-color: var(--p-ochre);
+}
+
+.pill-cv {
+  background-color: var(--p-rose);
+  border-color: var(--p-charcoal);
+  font-weight: 700;
+}
+
+.pill-cv:hover,
+.pill-cv:focus-visible {
+  background-color: var(--p-vermilion);
+  border-color: var(--p-charcoal);
+}
+
+.pill-mail:hover,
+.pill-mail:focus-visible {
+  background-color: var(--p-yellow);
+  border-color: var(--p-charcoal);
+}
+
+/* Barra de paleta inspirada en el cuadro */
+.palette-rule {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  height: 5px;
+  width: 100%;
+  margin: 2.5rem 0 2.75rem;
+}
+
 .graphite-rule {
   border: 0;
   height: 1px;
-  background-color: var(--rule);
-  margin: 3rem 0;
+  background-color: var(--p-blush);
+  margin: 2.5rem 0;
 }
 
 /* Secciones */
@@ -182,30 +219,63 @@ a:focus-visible {
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .roman-num {
-  font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.05rem;
-  color: var(--accent-blue);
-  min-width: 1.5rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  min-width: 1.65rem;
+  padding: 0.05rem 0.35rem;
+  text-align: center;
+  color: var(--ink);
+}
+
+.mark-vermilion {
+  background-color: var(--p-vermilion);
+}
+
+.mark-ochre {
+  background-color: var(--p-yellow);
+}
+
+.mark-slate {
+  background-color: var(--p-slate);
+}
+
+.mark-umber {
+  background-color: var(--p-rose);
+}
+
+.mark-charcoal {
+  background-color: var(--p-blush);
 }
 
 .section-head h2 {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: 1.55rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-/* Entradas (Experiencia, Educación, Proyectos) */
+/* Entradas */
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 2.25rem;
+  gap: 1.75rem;
+}
+
+.entry-proj {
+  padding-left: 1rem;
+  border-left: 3px solid var(--p-ochre);
+}
+
+.entry-proj:nth-child(2) {
+  border-left-color: var(--p-vermilion);
+}
+
+.entry-proj:nth-child(3) {
+  border-left-color: var(--p-slate);
 }
 
 .entry-head {
@@ -213,55 +283,55 @@ a:focus-visible {
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.45rem;
 }
 
 .entry-title {
   margin: 0;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.4;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
 .entry-sub {
   font-weight: 400;
-  color: var(--ink-muted);
 }
 
 .entry-role {
   margin: 0.15rem 0 0;
-  font-size: 0.88rem;
-  color: var(--ink-muted);
+  font-style: italic;
+  font-size: 0.96rem;
+  color: var(--ink);
 }
 
 .entry-meta,
 .repo-link {
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  color: var(--ink-muted);
+  font-size: 0.9rem;
+  color: var(--ink);
   white-space: nowrap;
 }
 
 .repo-link {
-  color: var(--accent-blue);
-  border-bottom-color: rgba(61, 90, 115, 0.35);
+  padding: 0.1rem 0.5rem;
+  background-color: var(--p-cream);
+  border: 1px solid var(--p-umber);
 }
 
 .repo-link:hover,
 .repo-link:focus-visible {
-  color: var(--accent-red);
-  border-bottom-color: var(--accent-red);
+  background-color: var(--p-yellow);
+  border-color: var(--p-charcoal);
 }
 
 .entry-list {
-  margin: 0.75rem 0 0;
-  padding-left: 1.1rem;
-  font-size: 0.92rem;
+  margin: 0.65rem 0 0;
+  padding-left: 1.2rem;
+  font-size: 0.98rem;
   color: var(--ink);
 }
 
 .entry-list li + li {
-  margin-top: 0.45rem;
+  margin-top: 0.4rem;
 }
 
 /* Listas clave-valor (Habilidades e Idiomas) */
@@ -269,21 +339,18 @@ a:focus-visible {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.75rem;
 }
 
 .kv-row {
   display: grid;
-  grid-template-columns: 155px 1fr;
+  grid-template-columns: 165px 1fr;
   gap: 1rem;
-  font-size: 0.92rem;
+  font-size: 0.98rem;
 }
 
 .kv-row dt {
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  color: var(--ink-muted);
-  padding-top: 0.2rem;
+  font-weight: 700;
 }
 
 .kv-row dd {
@@ -297,40 +364,37 @@ a:focus-visible {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
-  font-size: 0.9rem;
-}
-
-.cert-list strong {
-  font-weight: 500;
+  gap: 0.6rem;
+  font-size: 0.98rem;
 }
 
 .cert-year {
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  color: var(--ink-muted);
+  display: inline-block;
   margin-left: 0.35rem;
+  padding: 0 0.35rem;
+  background-color: var(--p-cream);
+  border: 1px solid var(--p-blush);
+  font-size: 0.85rem;
 }
 
 .langs-list {
-  margin-top: 1.85rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--rule);
+  margin-top: 1.75rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--p-blush);
 }
 
 /* Pie de página */
 .footer {
-  margin-top: 4.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--p-charcoal);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  color: var(--ink-muted);
+  font-size: 0.92rem;
+  color: var(--ink);
 }
 
 .footer-links {
@@ -345,12 +409,16 @@ a:focus-visible {
   }
 
   .topbar {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .artwork-frame {
+    height: 118px;
   }
 
   .entry-head {
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.3rem;
   }
 
   .kv-row {

@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arié Goldzweig Pérez — Ingeniero de Preventa · Científico de Datos</title>
   <meta name="description" content="Arié Goldzweig Pérez — Ingeniero de Preventa y Científico de Datos. Estudiante de Matemáticas Aplicadas y Ciencia de Datos en el ITAM.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -24,14 +21,9 @@
     <main class="sheet">
       <!-- Intro / Quién eres -->
       <section class="hero" aria-labelledby="site-title">
-        <!-- Trazo minimalista inspirado en los motivos lineales de "Say Goodbye, Catullus, to the Shores of Asia Minor" -->
-        <svg class="twombly-mark" viewBox="0 0 260 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M4 34 C 48 31, 96 35, 148 33 C 194 31, 224 33, 254 32" stroke="#23201D" stroke-width="0.85" stroke-linecap="round" opacity="0.5"/>
-          <path d="M18 33 L 26 16 L 34 33" stroke="#A63A2B" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" opacity="0.72"/>
-          <path d="M52 33 L 58 21 L 65 33" stroke="#3D5A73" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.65"/>
-          <path d="M22 25 C 32 23, 52 24, 62 27" stroke="#686158" stroke-width="0.7" stroke-linecap="round" opacity="0.45"/>
-          <path d="M188 18 C 196 14, 206 16, 212 22 C 216 26, 211 31, 204 29" stroke="#23201D" stroke-width="0.75" stroke-linecap="round" opacity="0.38"/>
-        </svg>
+        <div class="artwork-frame" aria-hidden="true">
+          <canvas id="catullus-canvas" class="catullus-canvas"></canvas>
+        </div>
 
         <h1 id="site-title" class="hero-name">Arié Goldzweig Pérez</h1>
         <p class="hero-role" data-i18n="role">Ingeniero de Preventa &middot; Científico de Datos</p>
@@ -41,26 +33,37 @@
 
         <ul class="hero-links" aria-label="Enlaces principales" data-i18n-aria="aria_links">
           <li>
-            <a href="https://github.com/goldzweigarie-bit" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="pill-link pill-github" href="https://github.com/goldzweigarie-bit" target="_blank" rel="noopener noreferrer">GitHub</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/ari%C3%A9-goldzweig-708079452" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="pill-link pill-linkedin" href="https://www.linkedin.com/in/ari%C3%A9-goldzweig-708079452" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </li>
           <li>
-            <a href="./CV.pdf" target="_blank" rel="noopener noreferrer" class="link-accent" data-i18n="cv_link">CV (PDF)</a>
+            <a class="pill-link pill-cv" href="./CV.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cv_link">CV (PDF)</a>
           </li>
           <li>
-            <a href="mailto:goldzweigarie@gmail.com">goldzweigarie@gmail.com</a>
+            <a class="pill-link pill-mail" href="mailto:goldzweigarie@gmail.com">goldzweigarie@gmail.com</a>
           </li>
         </ul>
       </section>
 
-      <hr class="graphite-rule">
+      <div class="palette-rule" aria-hidden="true">
+        <span style="background: var(--p-alabaster)"></span>
+        <span style="background: var(--p-cream)"></span>
+        <span style="background: var(--p-blush)"></span>
+        <span style="background: var(--p-yellow)"></span>
+        <span style="background: var(--p-ochre)"></span>
+        <span style="background: var(--p-rose)"></span>
+        <span style="background: var(--p-slate)"></span>
+        <span style="background: var(--p-charcoal)"></span>
+        <span style="background: var(--p-umber)"></span>
+        <span style="background: var(--p-vermilion)"></span>
+      </div>
 
       <!-- I. Experiencia Profesional -->
       <section class="section" aria-labelledby="sec-exp">
         <div class="section-head">
-          <span class="roman-num">I.</span>
+          <span class="roman-num mark-vermilion">I.</span>
           <h2 id="sec-exp" data-i18n="sec_exp">Experiencia Profesional</h2>
         </div>
 
@@ -85,7 +88,7 @@
       <!-- II. Educación -->
       <section class="section" aria-labelledby="sec-edu">
         <div class="section-head">
-          <span class="roman-num">II.</span>
+          <span class="roman-num mark-ochre">II.</span>
           <h2 id="sec-edu" data-i18n="sec_edu">Educación</h2>
         </div>
 
@@ -105,12 +108,12 @@
       <!-- III. Proyectos Destacados -->
       <section class="section" aria-labelledby="sec-proj">
         <div class="section-head">
-          <span class="roman-num">III.</span>
+          <span class="roman-num mark-slate">III.</span>
           <h2 id="sec-proj" data-i18n="sec_proj">Proyectos Destacados</h2>
         </div>
 
         <div class="projects">
-          <article class="entry">
+          <article class="entry entry-proj">
             <header class="entry-head">
               <div>
                 <h3 class="entry-title">
@@ -126,7 +129,7 @@
             </ul>
           </article>
 
-          <article class="entry">
+          <article class="entry entry-proj">
             <header class="entry-head">
               <div>
                 <h3 class="entry-title">
@@ -142,7 +145,7 @@
             </ul>
           </article>
 
-          <article class="entry">
+          <article class="entry entry-proj">
             <header class="entry-head">
               <div>
                 <h3 class="entry-title">
@@ -164,7 +167,7 @@
       <!-- IV. Habilidades -->
       <section class="section" aria-labelledby="sec-skills">
         <div class="section-head">
-          <span class="roman-num">IV.</span>
+          <span class="roman-num mark-umber">IV.</span>
           <h2 id="sec-skills" data-i18n="sec_skills">Habilidades</h2>
         </div>
 
@@ -197,7 +200,7 @@
       <!-- V. Certificaciones e Idiomas -->
       <section class="section" aria-labelledby="sec-certs">
         <div class="section-head">
-          <span class="roman-num">V.</span>
+          <span class="roman-num mark-charcoal">V.</span>
           <h2 id="sec-certs" data-i18n="sec_certs">Certificaciones e Idiomas</h2>
         </div>
 
