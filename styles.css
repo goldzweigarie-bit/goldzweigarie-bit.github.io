@@ -117,15 +117,14 @@ a:focus-visible {
 
 .artwork-frame {
   width: 100%;
-  height: 150px;
-  margin-bottom: 1.85rem;
+  margin: 0 0 1.85rem;
   background-color: var(--bg);
 }
 
-.catullus-canvas {
+.catullus-header-img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .hero-name {
@@ -410,10 +409,6 @@ a:focus-visible {
 
   .topbar {
     margin-bottom: 2rem;
-  }
-
-  .artwork-frame {
-    height: 118px;
   }
 
   .entry-head {
