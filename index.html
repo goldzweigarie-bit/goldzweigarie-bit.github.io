@@ -5,245 +5,255 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arié Goldzweig Pérez — Ingeniero de Preventa · Científico de Datos</title>
   <meta name="description" content="Arié Goldzweig Pérez — Ingeniero de Preventa y Científico de Datos. Estudiante de Matemáticas Aplicadas y Ciencia de Datos en el ITAM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@200;300;400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="canvas">
-    <header class="topbar">
-      <span class="topbar-loc" data-i18n="location">Ciudad de México</span>
-      <nav class="lang-switch" aria-label="Selector de idioma" data-i18n-aria="aria_lang">
+
+  <!-- Barra de navegación tipo píldora -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Navegación principal" data-i18n-aria="aria_nav">
+      <a class="nav-home" href="#top" aria-label="Inicio"><img src="./catullus-header.jpg" alt=""></a>
+      <a href="#proyectos" data-i18n="nav_proj">Proyectos</a>
+      <a href="#trayectoria" data-i18n="nav_path">Trayectoria</a>
+      <a href="#intereses" data-i18n="nav_int">Intereses</a>
+      <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+      <span class="lang-switch" role="group" aria-label="Selector de idioma" data-i18n-aria="aria_lang">
         <button type="button" class="lang-btn is-active" data-lang="es" aria-pressed="true">ES</button>
-        <span class="lang-sep" aria-hidden="true">/</span>
         <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-      </nav>
-    </header>
+      </span>
+    </nav>
+  </header>
 
-    <main class="sheet">
-      <!-- Intro / Quién eres -->
-      <section class="hero" aria-labelledby="site-title">
-        <figure class="artwork-frame">
-          <img
-            src="./catullus-header.jpg"
-            alt="Detalle de Untitled (Say Goodbye, Catullus, to the Shores of Asia Minor) de Cy Twombly"
-            data-i18n-alt="artwork_alt"
-            class="catullus-header-img"
-          >
-        </figure>
+  <main id="top">
 
-        <h1 id="site-title" class="hero-name">Arié Goldzweig Pérez</h1>
-        <p class="hero-role" data-i18n="role">Ingeniero de Preventa &middot; Científico de Datos</p>
-        <p class="hero-bio" data-i18n="bio">
-          Estudiante de Matemáticas Aplicadas y Ciencia de Datos en el ITAM e Ingeniero de Preventa y Científico de Datos Junior en SYCOD. Diseño arquitecturas de IA generativa, pipelines de datos y prototipos funcionales que conectan requisitos de negocio con soluciones técnicas reproducibles.
-        </p>
-
-        <ul class="hero-links" aria-label="Enlaces principales" data-i18n-aria="aria_links">
-          <li>
-            <a class="pill-link pill-github" href="https://github.com/goldzweigarie-bit" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </li>
-          <li>
-            <a class="pill-link pill-linkedin" href="https://www.linkedin.com/in/ari%C3%A9-goldzweig-708079452" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </li>
-          <li>
-            <a class="pill-link pill-cv" href="./CV.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cv_link">CV (PDF)</a>
-          </li>
-          <li>
-            <a class="pill-link pill-mail" href="mailto:goldzweigarie@gmail.com">goldzweigarie@gmail.com</a>
-          </li>
-        </ul>
-      </section>
-
-      <div class="palette-rule" aria-hidden="true">
-        <span style="background: var(--p-alabaster)"></span>
-        <span style="background: var(--p-cream)"></span>
-        <span style="background: var(--p-blush)"></span>
-        <span style="background: var(--p-yellow)"></span>
-        <span style="background: var(--p-ochre)"></span>
-        <span style="background: var(--p-rose)"></span>
-        <span style="background: var(--p-slate)"></span>
-        <span style="background: var(--p-charcoal)"></span>
-        <span style="background: var(--p-umber)"></span>
-        <span style="background: var(--p-vermilion)"></span>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-main">
+        <h1 class="hero-name">Arié<br>Goldzweig</h1>
+        <p class="hero-intro" data-i18n="intro">Diseño arquitecturas de IA generativa, pipelines de datos y prototipos funcionales que conectan requisitos de negocio con soluciones técnicas reproducibles.</p>
+        <div class="chip">
+          <img src="./catullus-header.jpg" alt="">
+          <span class="mono"><span data-i18n="chip_1">Ingeniero preventa</span><br><span data-i18n="chip_2">Científico de datos</span></span>
+        </div>
       </div>
-
-      <!-- I. Experiencia Profesional -->
-      <section class="section" aria-labelledby="sec-exp">
-        <div class="section-head">
-          <span class="roman-num mark-vermilion">I.</span>
-          <h2 id="sec-exp" data-i18n="sec_exp">Experiencia Profesional</h2>
-        </div>
-
-        <article class="entry">
-          <header class="entry-head">
-            <div>
-              <h3 class="entry-title">SYCOD <span class="entry-sub" data-i18n="sycod_full">(Sistemas y Computadores Digitales S.A. de C.V.)</span></h3>
-              <p class="entry-role" data-i18n="sycod_role">Ingeniero Preventa &amp; Científico de Datos Junior</p>
-            </div>
-            <span class="entry-meta" data-i18n="sycod_date">ene 2025 – Presente</span>
-          </header>
-          <ul class="entry-list">
-            <li data-i18n="sycod_b1">Diseño y presento soluciones técnicas de preventa de IA generativa y plataformas de datos (IBM watsonx, AWS, Redis) a clientes potenciales, traduciendo requisitos de negocio en arquitecturas viables.</li>
-            <li data-i18n="sycod_b2">Desarrollo prototipos y demos funcionales (POCs) de casos de uso de GenAI y analítica, acelerando el ciclo de venta y la validación técnica.</li>
-            <li data-i18n="sycod_b3">Administro bases de datos relacionales y NoSQL (Redis, SQL) y despliego servicios con Docker y GitHub, garantizando entornos reproducibles.</li>
-          </ul>
-        </article>
-      </section>
-
-      <hr class="graphite-rule">
-
-      <!-- II. Educación -->
-      <section class="section" aria-labelledby="sec-edu">
-        <div class="section-head">
-          <span class="roman-num mark-ochre">II.</span>
-          <h2 id="sec-edu" data-i18n="sec_edu">Educación</h2>
-        </div>
-
-        <article class="entry">
-          <header class="entry-head">
-            <div>
-              <h3 class="entry-title" data-i18n="itam_name">Instituto Tecnológico Autónomo de México (ITAM)</h3>
-              <p class="entry-role" data-i18n="itam_degree">Licenciatura en Matemáticas Aplicadas y Ciencia de Datos</p>
-            </div>
-            <span class="entry-meta" data-i18n="itam_date">En curso · egreso dic 2029</span>
-          </header>
-        </article>
-      </section>
-
-      <hr class="graphite-rule">
-
-      <!-- III. Proyectos Destacados -->
-      <section class="section" aria-labelledby="sec-proj">
-        <div class="section-head">
-          <span class="roman-num mark-slate">III.</span>
-          <h2 id="sec-proj" data-i18n="sec_proj">Proyectos Destacados</h2>
-        </div>
-
-        <div class="projects">
-          <article class="entry entry-proj">
-            <header class="entry-head">
-              <div>
-                <h3 class="entry-title">
-                  <a href="https://github.com/goldzweigarie-bit/diablos-rojos-WARROOM-stuffplus" target="_blank" rel="noopener noreferrer" data-i18n="p1_title">Modelo de Pitcheo "Stuff+" Ajustado por Altitud</a>
-                </h3>
-                <p class="entry-role">Hackathon ISAC 2026 &middot; XGBoost &middot; FastAPI</p>
-              </div>
-              <a class="repo-link" href="https://github.com/goldzweigarie-bit/diablos-rojos-WARROOM-stuffplus" target="_blank" rel="noopener noreferrer" data-i18n="view_repo">Repositorio &rarr;</a>
-            </header>
-            <ul class="entry-list">
-              <li data-i18n="p1_b1">Modelo de XGBoost para calificar la calidad de cada pitcheo en la Liga Mexicana de Béisbol, ajustando el efecto Magnus por la altitud de la CDMX (2,240 m).</li>
-              <li data-i18n="p1_b2">Arquitectura modular con APIs en FastAPI y web app para visualizar perfiles de pitchers, implementando flujos profesionales de Git (Pull Requests, ramas protegidas y revisión de código).</li>
-            </ul>
-          </article>
-
-          <article class="entry entry-proj">
-            <header class="entry-head">
-              <div>
-                <h3 class="entry-title">
-                  <a href="https://github.com/goldzweigarie-bit/Harness-Proyecto-Final" target="_blank" rel="noopener noreferrer" data-i18n="p2_title">NERV: Agent Harness desde Cero</a>
-                </h3>
-                <p class="entry-role" data-i18n="p2_sub">Python Stdlib &middot; Docker Sandbox &middot; Multiagente</p>
-              </div>
-              <a class="repo-link" href="https://github.com/goldzweigarie-bit/Harness-Proyecto-Final" target="_blank" rel="noopener noreferrer" data-i18n="view_repo">Repositorio &rarr;</a>
-            </header>
-            <ul class="entry-list">
-              <li data-i18n="p2_b1">Harness de agentes de IA codificadores construido únicamente con la librería estándar de Python, integrando un sandbox seguro con Docker (límites estrictos de CPU, memoria, sin red y usuario no-root).</li>
-              <li data-i18n="p2_b2">Especializado en operaciones de datos empresariales: validación de acceso SQL, recuperación de documentos y pipelines multiagente.</li>
-            </ul>
-          </article>
-
-          <article class="entry entry-proj">
-            <header class="entry-head">
-              <div>
-                <h3 class="entry-title">
-                  <a href="https://github.com/goldzweigarie-bit/bitcoin-whale-signal" target="_blank" rel="noopener noreferrer" data-i18n="p3_title">Detección de Señales de "Ballenas" en Bitcoin</a>
-                </h3>
-                <p class="entry-role">Data Pipeline &middot; NoSQL</p>
-              </div>
-              <a class="repo-link" href="https://github.com/goldzweigarie-bit/bitcoin-whale-signal" target="_blank" rel="noopener noreferrer" data-i18n="view_repo">Repositorio &rarr;</a>
-            </header>
-            <ul class="entry-list">
-              <li data-i18n="p3_b1">Pipeline de datos para rastrear y analizar transacciones cripto de alto volumen, utilizando bases de datos NoSQL para el almacenamiento y consulta eficiente de flujos de mercado.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <hr class="graphite-rule">
-
-      <!-- IV. Habilidades -->
-      <section class="section" aria-labelledby="sec-skills">
-        <div class="section-head">
-          <span class="roman-num mark-umber">IV.</span>
-          <h2 id="sec-skills" data-i18n="sec_skills">Habilidades</h2>
-        </div>
-
-        <dl class="kv-list">
-          <div class="kv-row">
-            <dt data-i18n="sk1_k">Ciencia de datos</dt>
-            <dd data-i18n="sk1_v">Python, SQL, modelado estadístico y machine learning, visualización de datos</dd>
-          </div>
-          <div class="kv-row">
-            <dt data-i18n="sk2_k">Bases de datos</dt>
-            <dd data-i18n="sk2_v">Gestión de SQL y NoSQL (Redis, PostgreSQL, MongoDB)</dd>
-          </div>
-          <div class="kv-row">
-            <dt>DevOps</dt>
-            <dd data-i18n="sk3_v">Dominio de Docker, GitHub/Git, CI/CD</dd>
-          </div>
-          <div class="kv-row">
-            <dt data-i18n="sk4_k">Nube e IA</dt>
-            <dd data-i18n="sk4_v">AWS, Azure Managed Redis, IBM watsonx (GenAI), Fortinet (ciberseguridad)</dd>
-          </div>
-          <div class="kv-row">
-            <dt data-i18n="sk5_k">Preventa técnica</dt>
-            <dd data-i18n="sk5_v">Demos, POCs, traducción de necesidades de negocio a soluciones técnicas</dd>
-          </div>
-        </dl>
-      </section>
-
-      <hr class="graphite-rule">
-
-      <!-- V. Certificaciones e Idiomas -->
-      <section class="section" aria-labelledby="sec-certs">
-        <div class="section-head">
-          <span class="roman-num mark-charcoal">V.</span>
-          <h2 id="sec-certs" data-i18n="sec_certs">Certificaciones e Idiomas</h2>
-        </div>
-
-        <ul class="cert-list">
-          <li><strong>Redis</strong> — Partner Sales Associate &middot; Partner Technical Sales Associate &middot; Deployment Engineer &middot; Operate Redis Cloud (Cloud Operator) <span class="cert-year">2026</span></li>
-          <li><strong>Microsoft</strong> — Azure Managed Redis (AMR) Partner Sales Associate <span class="cert-year">2026</span></li>
-          <li><strong>IBM</strong> — watsonx.ai Generative AI Tools: Technical Sales (Intermediate) <span class="cert-year">2026</span></li>
-          <li><strong>IBM</strong> — watsonx.data: Sales Foundation &middot; Technical Sales (Intermediate) <span class="cert-year">2026</span></li>
-          <li><strong>AWS / Tidwit</strong> — From Zero to Hero (FZTH) SMB &middot; Starter Kits GenAI <span data-i18n="public_sector">(Sector Público)</span> <span class="cert-year">2026</span></li>
-          <li><strong>Fortinet</strong> — Certified Fundamentals &middot; Certified Associate – Cybersecurity &middot; FortiGate 7.4 Operator &middot; NSE 1 / NSE 2 / NSE 3 in Cybersecurity <span class="cert-year">2025</span></li>
+      <aside class="hero-start">
+        <p class="label" data-i18n="start_label">Por dónde empezar</p>
+        <ul class="start-list">
+          <li><a href="#proyectos"><span class="ico" aria-hidden="true">◇</span><span data-i18n="start_1">Ver proyectos destacados</span></a></li>
+          <li><a href="#trayectoria"><span class="ico" aria-hidden="true">▢</span><span data-i18n="start_2">Revisar mi trayectoria</span></a></li>
+          <li><a href="#intereses"><span class="ico" aria-hidden="true">○</span><span data-i18n="start_3">Conocer mis intereses</span></a></li>
+          <li><a href="./CV.pdf" target="_blank" rel="noopener noreferrer"><span class="ico" aria-hidden="true">↓</span><span data-i18n="start_4">Descargar CV (PDF)</span></a></li>
         </ul>
+      </aside>
+    </section>
 
-        <dl class="kv-list langs-list">
-          <div class="kv-row">
-            <dt data-i18n="lang_es_k">Español</dt>
-            <dd data-i18n="lang_es_v">Nativo</dd>
-          </div>
-          <div class="kv-row">
-            <dt data-i18n="lang_en_k">Inglés</dt>
-            <dd data-i18n="lang_en_v">Nativo</dd>
-          </div>
-          <div class="kv-row">
-            <dt data-i18n="lang_de_k">Alemán</dt>
-            <dd data-i18n="lang_de_v">A2 (certificado); actualmente cursando B1</dd>
-          </div>
-        </dl>
-      </section>
-    </main>
+    <!-- Proyectos destacados -->
+    <div class="rule-label" id="proyectos">
+      <span class="label" data-i18n="feat_label">Proyectos destacados</span>
+      <span class="rule-line" aria-hidden="true"></span>
+      <span class="label">03</span>
+    </div>
 
-    <footer class="footer">
-      <span>Arié Goldzweig Pérez</span>
-      <nav class="footer-links" aria-label="Enlaces del pie de página" data-i18n-aria="aria_footer">
-        <a href="https://github.com/goldzweigarie-bit" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/ari%C3%A9-goldzweig-708079452" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="./CV.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cv_link">CV (PDF)</a>
-      </nav>
-    </footer>
-  </div>
+    <section class="features">
+      <article class="feature">
+        <div class="feature-panel">
+          <h2 class="feature-title" data-i18n="p1_title">Stuff+ ajustado por altitud</h2>
+          <div class="feature-body">
+            <p class="label label-light" data-i18n="from_proj">Del proyecto</p>
+            <p class="feature-quote" data-i18n="p1_desc">“Un modelo de XGBoost que califica cada pitcheo de la Liga Mexicana de Béisbol, ajustando el efecto Magnus por los 2,240 m de altitud de la CDMX.”</p>
+            <p class="tags mono">XGBoost · FastAPI · Hackathon ISAC 2026</p>
+            <div class="btn-row">
+              <a class="btn btn-light" href="https://github.com/goldzweigarie-bit/diablos-rojos-WARROOM-stuffplus" target="_blank" rel="noopener noreferrer"><span data-i18n="btn_repo">Ver repositorio</span> →</a>
+            </div>
+          </div>
+        </div>
+        <figure class="feature-still">
+          <img src="./img/twombly-blossoms.jpg" alt="Cy Twombly, Blooming" data-i18n-alt="alt_blossoms" loading="lazy">
+        </figure>
+      </article>
+
+      <article class="feature feature-flip">
+        <div class="feature-panel">
+          <h2 class="feature-title" data-i18n="p2_title">NERV: agent harness desde cero</h2>
+          <div class="feature-body">
+            <p class="label label-light" data-i18n="from_proj">Del proyecto</p>
+            <p class="feature-quote" data-i18n="p2_desc">“Un harness de agentes codificadores construido sólo con la librería estándar de Python, con sandbox en Docker sin red, usuario no-root y límites estrictos de CPU y memoria.”</p>
+            <p class="tags mono" data-i18n="p2_tags">Python stdlib · Docker · Multiagente</p>
+            <div class="btn-row">
+              <a class="btn btn-light" href="https://github.com/goldzweigarie-bit/Harness-Proyecto-Final" target="_blank" rel="noopener noreferrer"><span data-i18n="btn_repo">Ver repositorio</span> →</a>
+            </div>
+          </div>
+        </div>
+        <figure class="feature-still">
+          <img src="./img/twombly-contemplation.jpg" alt="Cy Twombly, obra sobre papel en rojo y rosa" data-i18n-alt="alt_contemplation" loading="lazy">
+        </figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature-panel">
+          <h2 class="feature-title" data-i18n="p3_title">Señales de ballenas en Bitcoin</h2>
+          <div class="feature-body">
+            <p class="label label-light" data-i18n="from_proj">Del proyecto</p>
+            <p class="feature-quote" data-i18n="p3_desc">“Un pipeline de datos que rastrea transacciones cripto de alto volumen y usa bases de datos NoSQL para almacenar y consultar flujos de mercado.”</p>
+            <p class="tags mono">Data pipeline · NoSQL</p>
+            <div class="btn-row">
+              <a class="btn btn-light" href="https://github.com/goldzweigarie-bit/bitcoin-whale-signal" target="_blank" rel="noopener noreferrer"><span data-i18n="btn_repo">Ver repositorio</span> →</a>
+            </div>
+          </div>
+        </div>
+        <figure class="feature-still">
+          <img src="./img/twombly-blackboard.jpg" alt="Cy Twombly, pintura tipo pizarrón" data-i18n-alt="alt_blackboard" loading="lazy">
+        </figure>
+      </article>
+    </section>
+
+    <!-- Trayectoria: carrusel -->
+    <section class="all" id="trayectoria">
+      <h2 class="display center"><span data-i18n="path_title">Trayectoria</span><sup class="mono">06</sup></h2>
+      <div class="carousel" aria-roledescription="carrusel">
+        <ul class="track">
+          <li class="slide" data-tags="Preventa|GenAI|Redis · AWS · watsonx">
+            <a href="#experiencia" class="slide-card"><img src="./img/twombly-peonies.jpg" alt=""></a>
+            <p class="slide-name">SYCOD</p>
+          </li>
+          <li class="slide" data-tags="Matemáticas aplicadas|Ciencia de datos|2029">
+            <a href="#experiencia" class="slide-card"><img src="./img/twombly-crayon.jpg" alt=""></a>
+            <p class="slide-name">ITAM</p>
+          </li>
+          <li class="slide" data-tags="XGBoost|FastAPI|Béisbol">
+            <a href="https://github.com/goldzweigarie-bit/diablos-rojos-WARROOM-stuffplus" target="_blank" rel="noopener noreferrer" class="slide-card"><img src="./img/twombly-blossoms.jpg" alt=""></a>
+            <p class="slide-name">Stuff+</p>
+          </li>
+          <li class="slide" data-tags="Agentes|Docker|Python">
+            <a href="https://github.com/goldzweigarie-bit/Harness-Proyecto-Final" target="_blank" rel="noopener noreferrer" class="slide-card"><img src="./img/twombly-contemplation.jpg" alt=""></a>
+            <p class="slide-name">NERV</p>
+          </li>
+          <li class="slide" data-tags="NoSQL|Pipeline|Bitcoin">
+            <a href="https://github.com/goldzweigarie-bit/bitcoin-whale-signal" target="_blank" rel="noopener noreferrer" class="slide-card"><img src="./img/twombly-blackboard.jpg" alt=""></a>
+            <p class="slide-name">Whale Signal</p>
+          </li>
+          <li class="slide" data-tags="Redis|IBM|Fortinet">
+            <a href="#experiencia" class="slide-card"><img src="./catullus-header.jpg" alt=""></a>
+            <p class="slide-name" data-i18n="certs_short">Certificaciones</p>
+          </li>
+        </ul>
+        <div class="slide-tags mono" aria-live="polite"></div>
+      </div>
+      <div class="carousel-ctrl">
+        <button type="button" class="btn btn-ghost" data-dir="-1">← <span data-i18n="back">Atrás</span></button>
+        <span class="progress" aria-hidden="true"><span class="progress-bar"></span></span>
+        <button type="button" class="btn btn-ghost" data-dir="1"><span data-i18n="next">Siguiente</span> →</button>
+      </div>
+    </section>
+
+    <!-- Experiencia y educación (layout tipo blog) -->
+    <section class="split" id="experiencia">
+      <div class="split-left">
+        <h2 class="display"><span data-i18n="exp_title">Experiencia</span><span class="badge" aria-hidden="true">✎</span></h2>
+        <div class="side-list">
+          <p class="label" data-i18n="certs_label">Certificaciones</p>
+          <ul>
+            <li><span class="ico" aria-hidden="true">△</span>Redis — Sales, Technical Sales, Deployment Engineer, Cloud Operator</li>
+            <li><span class="ico" aria-hidden="true">△</span>Microsoft — Azure Managed Redis Partner Sales</li>
+            <li><span class="ico" aria-hidden="true">△</span>IBM — watsonx.ai · watsonx.data Technical Sales</li>
+            <li><span class="ico" aria-hidden="true">△</span>AWS / Tidwit — FZTH SMB · GenAI Starter Kits</li>
+            <li><span class="ico" aria-hidden="true">△</span>Fortinet — Certified Associate · FortiGate 7.4 · NSE 1–3</li>
+          </ul>
+        </div>
+      </div>
+      <div class="split-right">
+        <h3 class="post-title" data-i18n="sycod_role">Ingeniero Preventa &amp; Científico de Datos Junior — SYCOD</h3>
+        <p class="mono meta" data-i18n="sycod_date">Ene 2025 — Presente</p>
+        <p data-i18n="sycod_p1">Diseño y presento soluciones técnicas de preventa de IA generativa y plataformas de datos (IBM watsonx, AWS, Redis), traduciendo requisitos de negocio en arquitecturas viables.</p>
+        <p data-i18n="sycod_p2">Desarrollo prototipos y demos funcionales (POCs) de casos de uso de GenAI y analítica, administro bases de datos SQL y NoSQL y despliego servicios con Docker y GitHub en entornos reproducibles.</p>
+
+        <h3 class="post-title spaced" data-i18n="itam_degree">Licenciatura en Matemáticas Aplicadas y Ciencia de Datos — ITAM</h3>
+        <p class="mono meta" data-i18n="itam_date">En curso — egreso dic 2029</p>
+
+        <a class="btn btn-ghost" href="./CV.pdf" target="_blank" rel="noopener noreferrer"><span data-i18n="btn_cv">Descargar CV</span> →</a>
+      </div>
+    </section>
+
+    <!-- Intereses -->
+    <div class="rule-label" id="intereses">
+      <span class="label" data-i18n="int_label">Intereses</span>
+      <span class="rule-line" aria-hidden="true"></span>
+      <span class="label">03</span>
+    </div>
+
+    <section class="interests">
+      <figure class="interest-still">
+        <img src="./img/twombly-crayon.jpg" alt="Cy Twombly, dibujo en crayón sobre papel" data-i18n-alt="alt_crayon" loading="lazy">
+        <figcaption class="interest-overlay">
+          <h2 class="display light" data-i18n="int_title">La ciudad como sistema</h2>
+          <p data-i18n="int_intro">Me interesa cómo se planean, gestionan y diseñan las ciudades, y cómo los datos pueden informar esas decisiones.</p>
+        </figcaption>
+      </figure>
+      <div class="interest-grid">
+        <article>
+          <p class="label">I.</p>
+          <h3 class="post-title" data-i18n="int1_t">Planeación urbana</h3>
+          <p data-i18n="int1_d">Uso de suelo, movilidad y crecimiento de la ciudad.</p>
+        </article>
+        <article>
+          <p class="label">II.</p>
+          <h3 class="post-title" data-i18n="int2_t">Gestión urbana</h3>
+          <p data-i18n="int2_d">Administración de servicios, infraestructura y políticas públicas locales.</p>
+        </article>
+        <article>
+          <p class="label">III.</p>
+          <h3 class="post-title" data-i18n="int3_t">Diseño urbano</h3>
+          <p data-i18n="int3_d">Forma del espacio público, calles y vida de barrio.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Habilidades e idiomas -->
+    <section class="split" id="habilidades">
+      <div class="split-left">
+        <h2 class="display" data-i18n="skills_title">Habilidades</h2>
+        <div class="side-list">
+          <p class="label" data-i18n="langs_label">Idiomas</p>
+          <ul>
+            <li><span class="ico" aria-hidden="true">◦</span><span data-i18n="lang_es">Español — nativo</span></li>
+            <li><span class="ico" aria-hidden="true">◦</span><span data-i18n="lang_en">Inglés — nativo</span></li>
+            <li><span class="ico" aria-hidden="true">◦</span><span data-i18n="lang_de">Alemán — A2 certificado, cursando B1</span></li>
+          </ul>
+        </div>
+      </div>
+      <dl class="split-right kv">
+        <div><dt class="mono" data-i18n="sk1_k">Ciencia de datos</dt><dd data-i18n="sk1_v">Python, SQL, modelado estadístico, machine learning y visualización.</dd></div>
+        <div><dt class="mono" data-i18n="sk2_k">Bases de datos</dt><dd data-i18n="sk2_v">SQL y NoSQL: Redis, PostgreSQL, MongoDB.</dd></div>
+        <div><dt class="mono">DevOps</dt><dd data-i18n="sk3_v">Docker, Git/GitHub, CI/CD.</dd></div>
+        <div><dt class="mono" data-i18n="sk4_k">Nube e IA</dt><dd data-i18n="sk4_v">AWS, Azure Managed Redis, IBM watsonx, Fortinet.</dd></div>
+        <div><dt class="mono" data-i18n="sk5_k">Preventa técnica</dt><dd data-i18n="sk5_v">Demos, POCs y traducción de necesidades de negocio a arquitecturas.</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <!-- Pie tipo píldora -->
+  <footer class="foot" id="contacto">
+    <div class="chip chip-boxed">
+      <img src="./catullus-header.jpg" alt="">
+      <span class="mono"><span data-i18n="chip_1">Ingeniero preventa</span><br><span data-i18n="chip_2">Científico de datos</span></span>
+    </div>
+    <nav class="foot-links mono" aria-label="Enlaces del pie de página" data-i18n-aria="aria_footer">
+      <a href="#proyectos" data-i18n="nav_proj">Proyectos</a>
+      <a href="./CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+      <a href="mailto:goldzweigarie@gmail.com" data-i18n="nav_mail">Correo</a>
+    </nav>
+    <div class="foot-icons">
+      <a class="icon-btn" href="https://github.com/goldzweigarie-bit" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/ari%C3%A9-goldzweig-708079452" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M0 1.15C0 .52.52 0 1.18 0h13.64C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.18 1.15H1.18C.52 16 0 15.48 0 14.85zM4.94 13.4V6.17h-2.4v7.23zM3.74 5.18c.84 0 1.36-.55 1.36-1.25-.02-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .7.52 1.25 1.32 1.25zm4.91 8.22V9.36c0-.22.02-.43.08-.59.17-.43.57-.88 1.23-.88.87 0 1.21.66 1.21 1.63v3.88h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19v-1.02h-2.4c.03.68 0 7.23 0 7.23z"/></svg>
+      </a>
+    </div>
+  </footer>
 
   <script src="./script.js"></script>
 </body>
